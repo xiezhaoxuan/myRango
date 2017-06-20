@@ -9,17 +9,18 @@
             CSRF verification failed. Request aborted.
    还不知道具体是什么原因，先跳过，以后再细看。
 
-   问题解决了，在https://django-registration-redux.readthedocs.io/en/latest/quickstart.html官方有详细的使用说明
+   问题解决了，在https://django-registration-redux.readthedocs.io/en/latest/quickstart.html  官方有详细的使用说明
    ，其中有下面一项:
-   For example, you might have something like the following in your Django settings file:
-     INSTALLED_APPS = (
-    'django.contrib.sites',
-    'registration', #should be immediately above 'django.contrib.auth'
-    'django.contrib.auth',
-    # ...other installed applications...
-     )
-     ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
-     REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
+   
+    For example, you might have something like the following in your Django settings file:
+      INSTALLED_APPS = (
+        'django.contrib.sites',
+        'registration', #should be immediately above 'django.contrib.auth'
+        'django.contrib.auth',
+        # ...other installed applications...
+        )
+      ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window; you may, of course, use a different value.
+      REGISTRATION_AUTO_LOGIN = True # Automatically log the user in.
 
     对比发现我的INSTALLED_APPS里面没有django.contrib.sites，加上之后就好了。。。。
 

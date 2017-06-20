@@ -52,18 +52,27 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
 #restricted
 
-LOGIN_URL = '/rango/login/'
+#LOGIN_URL = '/rango/login/'
+
+#django-registration-redux config
+REGISTRATION_OPEN = True
+ACCOUNT_ACTIVATION_DAYS = 7
+REGISTRATION_AUTO_LOGIN = True
+LOGIN_REDIRECT_URL = '/rango/'
+LOGIN_URL = '/accounts/login'
 
 # Application definition
 
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
+    'django.contrib.sites',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rango'
+    'rango',
+    'registration',
 )
 
 MIDDLEWARE_CLASSES = (

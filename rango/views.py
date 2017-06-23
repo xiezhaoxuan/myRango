@@ -120,6 +120,9 @@ def user_login(request):
     else:
         return render(request,'rango/login.html',{})
 
+def about(request):
+    return render(request,'rango/about.html',{})
+
 @login_required
 def restricted(request):
     return HttpResponse("Since you`re logged in,you can see this text!")

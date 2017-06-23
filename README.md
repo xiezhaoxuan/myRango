@@ -24,3 +24,11 @@
 
     对比发现我的INSTALLED_APPS里面没有django.contrib.sites，加上之后就好了。。。。
 
+2、第13章开始使用那个模板时会出现如下错误:
+    You're using the Django "sites framework" without having set the SITE_ID setting.
+    Create a site in your database and set the SITE_ID setting to fix this error.
+
+    解决办法是在settings.py文件中添加如下一行:
+       SITE_ID = 1
+3、第15章是介绍Bing的API的，将Bing的搜索功能嵌入到rango中，先不看。
+

@@ -61,6 +61,9 @@ REGISTRATION_AUTO_LOGIN = True
 LOGIN_REDIRECT_URL = '/rango/'
 LOGIN_URL = '/accounts/login'
 
+#no kown
+SITE_ID = 1
+
 # Application definition
 
 INSTALLED_APPS = (
